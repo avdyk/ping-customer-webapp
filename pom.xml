@@ -63,9 +63,9 @@
         </plugins>
     </build>
     <scm>
-        <developerConnection>
-            scm:git:git://github.com/avdyk/ping-customer-webapp.git
-        </developerConnection>
+        <url>https://github.com/avdyk/ping-customer-webapp.git</url>
+        <connection>scm:git:git://github.com/avdyk/ping-customer-webapp.git</connection>
+        <developerConnection>scm:git:git@github.com:avdyk/ping-customer-webapp.git</developerConnection>
     </scm>
 
 </project>
