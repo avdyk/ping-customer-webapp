@@ -42,9 +42,15 @@ public class PingCustomerServlet extends HttpServlet {
     }
 
     private String createQuota(final String id) {
+        final String storageMb;
+        if ("666".equals(id)) {
+            storageMb = "null";
+        } else {
+            storageMb = createBigDecimal();
+        }
         StringBuilder qString = new StringBuilder("    {\n");
         qString.append("      \"clientId\": \"").append(id).append("\",\n");
-        qString.append("      \"storageMb\": ").append(createBigDecimal()).append('\n');
+        qString.append("      \"storageMb\": ").append(storageMb).append('\n');
         qString.append("    }");
         log("Recieved id: " + id + "; created quota: " + qString.toString());
         return qString.toString();
